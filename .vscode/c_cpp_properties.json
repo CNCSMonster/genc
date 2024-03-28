@@ -1,0 +1,14 @@
+{
+    // 增加include路径
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/snap/klee/9/usr/local/include" // 添加您的引入路径
+            ]
+            // 其他配置...
+        }
+    ],
+    "version": 4
+}

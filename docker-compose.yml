@@ -1,0 +1,11 @@
+version: '3'
+
+# 使用klee/klee镜像 挂载当前路径到该镜像启动的容器的/home/klee/workplace下面
+services:
+  klee:
+    image: klee/klee
+    container_name: genc
+    command:  tail -f /dev/null
+    volumes:
+      - .:/home/klee/workplace
+    
