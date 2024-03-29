@@ -1,22 +1,14 @@
 #include <klee/klee.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-struct Expr
-{
-    int kind;
-    union
-    {
-        int value;
-        struct
-        {
-            struct Expr *left;
-            struct Expr *right;
-        } binop;
-    } info;
-};
+#include "str.h"
+#include "expr.h"
+#include "gener.h"
 
 int main()
 {
+    Expr *expr = gen_expr(1, 2);
+    print_expr(expr);
+    free_expr(expr);
     return 0;
 }
