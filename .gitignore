@@ -2,3 +2,4 @@ klee-*
 a.bc
 target
 reports
+.vscode
